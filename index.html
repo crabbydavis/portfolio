@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div id="title">
+		<h1 id="title_of_page">Davis Crabb</h1>
+	</div>
+	<div id="about"> 
+		<img src="wife.JPG" id="wife_picture">
+		<p id="about_text"> 
+			I'm currently a student at Brigham Young University doing a Computer Engineering major and Computer Science minor. I enjoy working in teams to solve problems and the collective feeling of triumph when meeting success. I love reading books that deal with business and self-improvement and have found an outlet for my desire to innovate in doing app development. I'm passionate about sports including soccer, ping pong, and inner tube water polo. My ultimate endeavor is to innovate in developing countries with my dear wife Anna.
+		</p>
+		<h5><a href="#projects">Projects</a></h5>
+		<h5><a href="#work_experience">Work Experience</a></h5>
+		<h5><a href="#learn_more">Learn More</a></h5>
+		<button id=button>Color Change</button>
+	</div>
+	<div id="projects">
+		<h2>Projects</h2>
+		<p id="project_text">I really enjoy doing Android app development and have done a few different apps including an Asteroids game, a Family Map, and a game called Get2Know. Recently I've been learning how to do web programming and have a few examples of those projects that I've done below.
+		</p>
+		<table>
+			<thead>
+				<tr>
+					<th><a target="_blank" href="https://www.khanacademy.org/computer-programming/spin-off-of-challenge-a-picture-perfect-trip/6516752001859584">Image Project</a></th>
+					<th><a target="_blank" href="https://www.khanacademy.org/computer-programming/spin-off-of-project-travel-webpage/4660846033174528">CSS Project</a></th>
+					<th><a target="_blank" href="https://www.khanacademy.org/computer-programming/spin-off-of-project-event-invite/6556053502754816">Layout Project</a></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>This is a project that I did to practice using images in web pages</td>
+					<td>This is a project that I did to practice using basic CSS</td>
+					<td>This is a project that i did to practice using CSS to layout the page</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	<div id="work_experience">
+		<h2>Work Experience</h2>
+		<h3>Software Tester, Modere, Springville, UT 07/2016 – 01/2017</h3>
+		<p>Responsible to validate product quality and to ensure that only the best product gets put forth to customers – even in time sensitive situations.
+			<ul>
+				<li>Tasks include verifying that the site works correctly across various mobile devices and platforms (50% of site traffic is from mobile devices).</li>
+				<li>Developed global agility by working with people across the world including Nepal, India, Australia, and Japan.</li>
+				<li>Team member using Agile methodology and JIRA for project tracking.</li>
+			</li>
+		</p>
+	</div>
+	<div id="learn_more">
+		<h2>Learn More</h2>
+		<img src="pose.JPG" id="pose_picture">
+		<h3 id="learn_more_text"> Click these links to learn more about me and my projects:</h3>
+		<ul id="learn_more_links">
+			<li><a target="_blank" href="https://www.linkedin.com/in/davis-crabb-94474a11b">LinkedIn Profile</a></li>
+			<li><a target="_blank" href="https://github.com/BYUCS201W2017/lab-1-portfolio-crabbydavis">GitHub</a></li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		var colorButton = document.getElementById("button");
+		var onButtonClick = function(){
+			var headerEls = document.getElementsByTagName("h2");
+			console.log(headerEls);
+			for(var i = 0; i < headerEls.length; i++){
+				if (headerEls[i].style.backgroundColor != "blue"){
+					headerEls[i].style.backgroundColor = "blue";
+				}
+				else {
+					headerEls[i].style.backgroundColor = "gray"
+				}
+			}
+		};
+		colorButton.addEventListener("click", onButtonClick);
+	</script>
+</body>
+</html>
+
